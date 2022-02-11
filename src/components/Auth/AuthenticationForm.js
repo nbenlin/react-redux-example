@@ -23,11 +23,11 @@ const AuthenticationForm = () => {
       <Form onSubmit={loginHandler}>
         <InputGroup>
           <Label htmlFor="email">Email</Label>
-          <Input id="email" />
+          <Input id="email" type="email" />
         </InputGroup>
         <InputGroup>
           <Label htmlFor="password">Password</Label>
-          <Input id="password" />
+          <Input id="password" type="password" />
         </InputGroup>
         <Button>Submit</Button>
       </Form>
