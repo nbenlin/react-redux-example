@@ -44,7 +44,9 @@ const Dashboard = () => {
               <Td>
                 <Button primary>edit</Button>
               </Td>
-              <Td>deleteButton</Td>
+              <Td>
+                <Button>delete</Button>
+              </Td>
             </Tr>
             <Tr>
               <Td>52</Td>
@@ -55,7 +57,9 @@ const Dashboard = () => {
               <Td>
                 <Button primary>edit</Button>
               </Td>
-              <Td>deleteButton</Td>
+              <Td>
+                <Button>delete</Button>
+              </Td>
             </Tr>
             <Tr>
               <Td>65</Td>
@@ -66,7 +70,9 @@ const Dashboard = () => {
               <Td>
                 <Button primary>edit</Button>
               </Td>
-              <Td>deleteButton</Td>
+              <Td>
+                <Button>delete</Button>
+              </Td>
             </Tr>
           </TBody>
         </Table>
