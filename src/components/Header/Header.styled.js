@@ -21,4 +21,9 @@ export const ListItem = styled.li`
   font-size: 1.6rem;
   margin: 0 1rem;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    font-weight: 600;
+  }
 `;
