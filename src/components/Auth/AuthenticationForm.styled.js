@@ -23,6 +23,8 @@ export const Input = styled.input`
   width: 30rem;
   padding: 1rem;
   font-size: 1.6rem;
+  border: 1px solid #424242;
+  border-radius: 4px;
 
   &:focus {
     outline: none;
