@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Button from "../UI/Button/Button";
 import {
   DashboardContainer,
@@ -15,6 +16,12 @@ import {
 } from "./Dashboard.styled";
 
 const Dashboard = ({ display }) => {
+  const usersData = useSelector((state) => state.table.users);
+  console.log(
+    "From dashboard",
+    Object.values(usersData).map((user) => user.id)
+  );
+
   return (
     <DashboardContainer>
       <DashboardHeader>
@@ -22,26 +29,26 @@ const Dashboard = ({ display }) => {
         <DashboardHeaderButton>Add new</DashboardHeaderButton>
       </DashboardHeader>
       <DashboardBody>
-        {display && (
-          <Table cellPadding={0} cellSpacing={0}>
-            <THead>
+        <Table cellPadding={0} cellSpacing={0}>
+          <THead>
+            <Tr>
+              <Th>Id</Th>
+              <Th>Name</Th>
+              <Th>Username</Th>
+              <Th>Email</Th>
+              <Th>City</Th>
+              <Th>Edit</Th>
+              <Th>Delete</Th>
+            </Tr>
+          </THead>
+          <TBody>
+            {Object.values(usersData).map((user) => (
               <Tr>
-                <Th>Id</Th>
-                <Th>Name</Th>
-                <Th>Username</Th>
-                <Th>Email</Th>
-                <Th>City</Th>
-                <Th>Edit</Th>
-                <Th>Delete</Th>
-              </Tr>
-            </THead>
-            <TBody>
-              <Tr>
-                <Td>22</Td>
-                <Td>Nihat</Td>
-                <Td>Benli</Td>
-                <Td>nihatbenli.nb@gmail.com</Td>
-                <Td>Poznan</Td>
+                <Td>{user.id}</Td>
+                <Td>{user.name}</Td>
+                <Td>{user.username}</Td>
+                <Td>{user.email}</Td>
+                <Td>{user.address.city}</Td>
                 <Td>
                   <Button primary>edit</Button>
                 </Td>
@@ -49,35 +56,9 @@ const Dashboard = ({ display }) => {
                   <Button>delete</Button>
                 </Td>
               </Tr>
-              <Tr>
-                <Td>52</Td>
-                <Td>Adam</Td>
-                <Td>Nowak</Td>
-                <Td>adamnowak@test.com</Td>
-                <Td>Wroclaw</Td>
-                <Td>
-                  <Button primary>edit</Button>
-                </Td>
-                <Td>
-                  <Button>delete</Button>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>65</Td>
-                <Td>Jan</Td>
-                <Td>Kowalski</Td>
-                <Td>kowalski@test.com</Td>
-                <Td>Warszawa</Td>
-                <Td>
-                  <Button primary>edit</Button>
-                </Td>
-                <Td>
-                  <Button>delete</Button>
-                </Td>
-              </Tr>
-            </TBody>
-          </Table>
-        )}
+            ))}
+          </TBody>
+        </Table>
       </DashboardBody>
     </DashboardContainer>
   );
