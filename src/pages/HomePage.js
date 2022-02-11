@@ -4,13 +4,13 @@ import AuthenticationForm from "../components/Auth/AuthenticationForm";
 import Dashboard from "../components/Dashboard/Dashboard";
 import { HomepageWrapper } from "./HomePage.styled";
 
-const HomePage = () => {
+const HomePage = ({ display }) => {
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
 
   return (
     <HomepageWrapper>
       {!isAuth && <AuthenticationForm />}
-      {isAuth && <Dashboard />}
+      {isAuth && <Dashboard display={display} />}
     </HomepageWrapper>
   );
 };
