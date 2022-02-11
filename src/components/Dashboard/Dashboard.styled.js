@@ -27,6 +27,10 @@ export const DashboardHeaderButton = styled.button`
   font-size: 1.4rem;
   font-weight: 600;
   color: white;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 export const DashboardBody = styled.div`
   display: flex;

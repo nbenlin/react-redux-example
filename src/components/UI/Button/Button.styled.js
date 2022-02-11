@@ -8,4 +8,9 @@ export const ButtonWrap = styled.button`
   background-color: ${({ primary }) => (primary ? "#ff9800" : "#f44336")};
   color: #fff;
   font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
