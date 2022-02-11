@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   const dispatch = useDispatch();
-  const displayTable = useSelector((state) => state.ui.tableIsVisible);
+  // const displayTable = useSelector((state) => state.ui.tableIsVisible);
 
   useEffect(() => {
     dispatch(fetchTableData());
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <HomePage display={displayTable} />
+      <HomePage />
     </>
   );
 }

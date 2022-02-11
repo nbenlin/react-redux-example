@@ -10,7 +10,7 @@ const HomePage = ({ display }) => {
   return (
     <HomepageWrapper>
       {!isAuth && <AuthenticationForm />}
-      {isAuth && <Dashboard display={display} />}
+      {isAuth && <Dashboard />}
     </HomepageWrapper>
   );
 };
