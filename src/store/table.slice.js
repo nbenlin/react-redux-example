@@ -28,6 +28,7 @@ const tableSlice = createSlice({
         },
       },
     ],
+    changed: false,
   },
   reducers: {
     replaceTable(state, action) {
@@ -57,5 +58,4 @@ const tableSlice = createSlice({
 });
 
 export const tableActions = tableSlice.actions;
-
-export default tableSlice;
+export default tableSlice.reducer;
