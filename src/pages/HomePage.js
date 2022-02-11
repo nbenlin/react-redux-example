@@ -6,7 +6,7 @@ import { HomepageWrapper } from "./HomePage.styled";
 
 const HomePage = () => {
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
-  debugger;
+
   return (
     <HomepageWrapper>
       {!isAuth && <AuthenticationForm />}
