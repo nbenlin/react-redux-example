@@ -5,6 +5,7 @@ export const DashboardContainer = styled.section`
   top: 2rem;
   box-shadow: 0px 0px 11px 0px rgba(66, 68, 90, 1);
   border-radius: 1.2rem;
+  min-width: 80%;
   height: 80vh;
 `;
 
