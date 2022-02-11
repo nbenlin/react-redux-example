@@ -17,7 +17,7 @@ export const fetchTableData = () => {
       const listData = await fetchData();
       dispatch(
         tableActions.replaceTable({
-          users: listData.users || [],
+          users: listData || [],
         })
       );
     } catch (error) {
