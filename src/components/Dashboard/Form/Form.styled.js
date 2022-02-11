@@ -32,7 +32,8 @@ export const Input = styled.input`
 
 export const ButtonGroup = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin-left: 3rem;
 `;
 
 export const FormButton = styled.button`
@@ -47,7 +48,8 @@ export const FormButton = styled.button`
   bottom: 1rem;
   left: 30%;
   cursor: pointer;
-  margin: 2rem 0rem;
+  margin: 3rem 1rem;
+  width: 17rem;
 
   &:hover {
     transform: scale(1.015);

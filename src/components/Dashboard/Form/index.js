@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "../../UI/Card/Card";
-import Button from "../../UI/Button/Button";
+import { useDispatch } from "react-redux";
+import { tableActions } from "../../../store/table.slice";
+import Card from "../../UI/Card";
 import {
   FormWrap,
   InputGroup,
@@ -11,11 +12,25 @@ import {
   ButtonGroup,
 } from "./Form.styled";
 
-const Form = () => {
+const Form = ({ toggleFormHandler }) => {
+  const dispatch = useDispatch();
+
+  const addUserHandler = (event) => {
+    event.preventDefault();
+    dispatch(
+      tableActions.addUserToTable({
+        id: 20,
+        name: "Tuncer",
+        username: "karsiki",
+        email: "test@test.com",
+        city: "Poznan",
+      })
+    );
+  };
   return (
     <Card>
       <FormWrap>
-        <FormStyled>
+        <FormStyled onSubmit={addUserHandler}>
           <InputGroup>
             <Label htmlFor="name">Name</Label>
             <Input id="nameemail" type="text" />
@@ -33,8 +48,10 @@ const Form = () => {
             <Input id="city" type="text" />
           </InputGroup>
           <ButtonGroup>
-            <FormButton apply>Apply Changes</FormButton>
-            <FormButton>Cancel</FormButton>
+            <FormButton type="submit" onClick={toggleFormHandler} apply>
+              Apply Changes
+            </FormButton>
+            <FormButton onClick={toggleFormHandler}>Cancel</FormButton>
           </ButtonGroup>
         </FormStyled>
       </FormWrap>

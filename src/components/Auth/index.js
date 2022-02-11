@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import Card from "../UI/Card/Card";
+import Card from "../UI/Card";
 import {
   Form,
   InputGroup,
