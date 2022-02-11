@@ -4,7 +4,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 28vw;
+
   padding: 0 3rem;
 `;
 
@@ -13,6 +13,7 @@ export const InputGroup = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.4rem;
+  width: 35rem;
 `;
 
 export const Label = styled.label`
@@ -20,8 +21,8 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 30rem;
-  padding: 1rem;
+  width: 25rem;
+  padding: 0.7rem;
   font-size: 1.6rem;
   border: 1px solid #424242;
   border-radius: 4px;
